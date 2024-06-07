@@ -49,6 +49,7 @@ export const parseStreaming = async (
       uint8Array = new Uint8Array([...uint8Array, ...chunk]);
       chunks = decoder.decode(uint8Array, { stream: true });
       if (chunks.includes(LLM_SPLIT)) {
+        console.log('chunks', chunks)
         const [sources, rest] = chunks.split(LLM_SPLIT);
         if (!sourcesEmitted) {
           try {
