@@ -18,13 +18,13 @@ export const parseStreaming = async (
   let uint8Array = new Uint8Array();
   let chunks = "";
   let sourcesEmitted = false;
-  const response = await fetch(`/query`, {
+  const response = await fetch(`http://lepton-search.us-east-2.elasticbeanstalk.com:8080/query`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "*./*",
     },
-    signal: controller.signal,
+    // signal: controller.signal,
     body: JSON.stringify({
       query,
       search_uuid,
