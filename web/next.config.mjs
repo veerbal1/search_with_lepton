@@ -16,7 +16,7 @@ export default (phase, { defaultConfig }) => {
         return [
           {
             source: "/query",
-            destination: "http://lepton-search.us-east-2.elasticbeanstalk.com:8080/query" // Proxy to Backend
+            destination: "http://0.0.0.0:8080/query" // Proxy to Backend
           }
         ];
       }
